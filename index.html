@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right,#D8B5FF , #1EAE98);
+            
+        }
+        div {
+            background-color: limegreen;
+            margin: auto;
+            width:400px;
+            height: 300px;
+            padding: 24px;
+            border-radius: 15px;
+        }
+        h1{
+            text-align: center;
+        }
+        .button{
+            width: 300px;
+            height: 40px;
+            display: flex;
+            gap: 5px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 5px;
+           
+            
+        }
+        .color{
+            border: 5px solid black;
+            font-size: larger;
+            background-color:lemonchiffon;
+            color: orange;
+            padding: 5px;
+            border-radius: 10px;
+
+        }
+      #result{
+            margin: 0 auto;
+            padding: 10px;
+            font-size: medium;
+            text-align: center;
+        }
+        input{
+            background-color: linen;
+            border-radius: 5px;
+        }
+        #clear{
+            margin-left: 20px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Calculator</h1>
+    <label for="num1">Enter first Number</label>
+    <input type="text" id="val1"><br><br>
+    <label for="num2">Enter second Number</label>
+    <input type="text" id="val2"><br><br>
+    <div class="button">
+    <button  id="btn" class="color" onclick="add()">+</button>
+    <button id="btn1" class="color" onclick="sub()">-</button>
+    <button id="btn2" class="color" onclick="div()">/</button>
+    <button id="btn3" class="color" onclick="mul()">*</button>
+    </div><br>
+    
+    <label>Result</label>
+    <input type="text" id="result">
+    <button id="clear" class="color" onclick="reclear()">Reset</button></span>
+    
+    <script>
+        function add(){
+       var x= parseInt(document.getElementById("val1").value);
+        var y= parseInt(document.getElementById("val2").value);
+           document.getElementById("result").value=x+y;
+        }
+        function sub(){
+            var x= parseInt(document.getElementById("val1").value);
+             var y= parseInt(document.getElementById("val2").value);
+                document.getElementById("result").value=x-y;
+             }
+             function div(){
+                var x= parseInt(document.getElementById("val1").value);
+                 var y= parseInt(document.getElementById("val2").value);
+                    document.getElementById("result").value=x/y;
+                 }
+                 function mul(){
+                    var x= parseInt(document.getElementById("val1").value);
+                     var y= parseInt(document.getElementById("val2").value);
+                        document.getElementById("result").value=x*y;
+                     }
+                     
+                        function reclear(){
+                            document.getElementById("val1").value = "";
+                            document.getElementById("val2").value = "";
+                            document.getElementById("result").value = "";
+                        }
+                        
+                     
+    </script>
+
+    
+    
+</body>
+</html>
